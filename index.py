@@ -1,3 +1,5 @@
+import Game, GameCharacter
+
 def main():
     print("Hello World!")
 

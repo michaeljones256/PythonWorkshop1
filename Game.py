@@ -3,6 +3,7 @@ class Game:
         self.gameName = name
         self.gameDescription = description
         self.character = characters
+        
 
     
 
