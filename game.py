@@ -3,6 +3,8 @@ class Game:
         self.gameName = name
         self.gameDescription = description
         self.character = characters
+    def attack(defender):
+        defender.hp = defender.hp - randint(5,30)
         
 
     
