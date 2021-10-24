@@ -31,3 +31,5 @@ class Game:
             temp = randint(3,10) * defender.status_damage_multiplier
             defender.hp = defender.hp - temp
             print("[{}] takes {} damage from {}".format(defender.name,temp,defender.status))
+
+        
