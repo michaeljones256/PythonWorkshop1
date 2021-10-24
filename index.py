@@ -3,7 +3,7 @@ from game import Game
 from random import randint
 def main():
     character1 = GameCharacter("Mario",27,"burned",100,"")
-    character2 = GameCharacter("Lugi",20,"frozen",100,"")
+    character2 = GameCharacter("Luigi",20,"frozen",100,"")
     # character1.displayCharacter()
 
     # Loop with attacking
@@ -21,10 +21,10 @@ def main():
                 print("[{}] Special Attacks {}".format(character1.name, character2.name))
                 Game.special_attack(character1, character2)
             if character1_move == "R":
-                print("[{}] Restores their".format(character1.name))
+                print("[{}] Restores their health".format(character1.name))
                 Game.restore(character1)
             if character2.status:
-                print("[{}] Damaged by {}".format(character1.name, character1.status))
+                print("[{}] Damaged by {}".format(character2.name, character2.status))
                 Game.status_damage(character1)
             if character2.hp <= 0:
                 print("{} has died, {} wins!".format(character2.name, character1.name))
@@ -37,7 +37,7 @@ def main():
                 print("[{}] Special Attacks {}".format(character2.name, character1.name))
                 Game.special_attack(character2, character1)
             if character2_move == "R":
-                print("[{}] Restores their".format(character2.name))
+                print("[{}] Restores their health".format(character2.name))
                 Game.restore(character2)
                 # Checks if they have a special status to damage them
             if character1.status:
@@ -57,7 +57,7 @@ def main():
                 print("[{}] Special Attacks {}".format(character2.name, character1.name))
                 Game.special_attack(character2, character1)
             if character2_move == "R":
-                print("[{}] Restores their".format(character2.name))
+                print("[{}] Restores their health".format(character2.name))
                 Game.restore(character2)
                 # Checks if they have a special status to damage them
             if character1.status:
@@ -75,7 +75,7 @@ def main():
                 print("[{}] Special Attacks {}".format(character1.name, character2.name))
                 Game.special_attack(character1, character2)
             if character1_move == "R":
-                print("[{}] Restores their".format(character1.name))
+                print("[{}] Restores their health".format(character1.name))
                 Game.restore(character1)
                 # Checks if they have a special status to damage them
             if character2.status:

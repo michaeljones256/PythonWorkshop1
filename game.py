@@ -16,10 +16,8 @@ class Game:
 
     def status_damage(defender):
         if defender.status == "burned":
-            defender.hp = defender.hp - randint(3,10)
+            defender.hp = defender.hp - randint(3,10) * defender.status_damage_multiplier()
+            defender.status_damage_multiplier += 1.5
         if defender.status == "frozen":
-            defender.hp = defender.hp - randint(3,10)
-        if defender.status == "poisoned":
-            defender.hp = defender.hp - randint(3,10)
-        if defender.status == "confused":
-            defender.hp = defender.hp - randint(3,10)
+            defender.hp = defender.hp - randint(3,10) * defender.status_damage_multiplier()
+            defender.status_damage_multiplier += 1.5
