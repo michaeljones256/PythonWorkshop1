@@ -1,4 +1,5 @@
 from random import randint
+from random import uniform
 
 class Game:
     def __init__ (self,name, description, characters):
@@ -11,15 +12,22 @@ class Game:
         defender.status = attacker.ability
     def restore(character):
         character.status = None
+        character.status_damage_multiplier = 0
         character.hp = character.hp + randint(1,10)
         if character.hp > 100:
             character.hp = 100
 
+
     def status_damage(defender):
         if defender.status == "burned":
-            defender.status_damage_multiplier += 1.5
-            defender.hp = defender.hp - randint(3,10) * defender.status_damage_multiplier
+            defender.status_damage_multiplier += uniform(1.1,1.9)
+            temp = randint(3,10) * defender.status_damage_multiplier
+            defender.hp = defender.hp - temp
+            print("[{}] takes {} damage from {}".format(defender.name,temp,defender.status))
+
             
         if defender.status == "frozen":
-            defender.status_damage_multiplier += 1.5
-            defender.hp = defender.hp - randint(3,10) * defender.status_damage_multiplier
+            defender.status_damage_multiplier += uniform(1.1,1.9)
+            temp = randint(3,10) * defender.status_damage_multiplier
+            defender.hp = defender.hp - temp
+            print("[{}] takes {} damage from {}".format(defender.name,temp,defender.status))

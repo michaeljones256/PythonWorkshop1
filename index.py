@@ -31,9 +31,9 @@ def main():
                 print("[{}] Restores their health".format(character1.name))
                 Game.restore(character1)
             if character2.status:
-                print("[{}] Damaged by {}".format(
-                    character2.name, character2.status))
-                Game.status_damage(character1)
+                # print("[{}] Damaged by {}".format(
+                #     character2.name, character2.status))
+                Game.status_damage(character2)
             if character2.hp <= 0:
                 print("{} has died, {} wins!".format(
                     character2.name, character1.name))
@@ -52,8 +52,8 @@ def main():
                 Game.restore(character2)
                 # Checks if they have a special status to damage them
             if character1.status:
-                print("[{}] Damaged by {}".format(
-                    character1.name, character1.status))
+                # print("[{}] Damaged by {}".format(
+                #     character1.name, character1.status))
                 Game.status_damage(character1)
             if character1.hp <= 0:
                 print("{} has died, {} wins!".format(
@@ -76,8 +76,8 @@ def main():
                 Game.restore(character2)
                 # Checks if they have a special status to damage them
             if character1.status:
-                print("[{}] Damaged by {}".format(
-                    character1.name, character1.status))
+                # print("[{}] Damaged by {}".format(
+                #     character1.name, character1.status))
                 Game.status_damage(character1)
             if character1.hp <= 0:
                 print("{} has died, {} wins!".format(
@@ -98,8 +98,8 @@ def main():
                 Game.restore(character1)
                 # Checks if they have a special status to damage them
             if character2.status:
-                print("[{}] Damaged by {}".format(
-                    character2.name, character2.status))
+                # print("[{}] Damaged by {}".format(
+                #     character2.name, character2.status))
                 Game.status_damage(character2)
             if character2.hp <= 0:
                 print("{} has died, {} wins!".format(
