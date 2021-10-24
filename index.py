@@ -53,7 +53,7 @@ def main():
             if character2_move == "A":
                 print("[{}] Attacks {}".format(character2.name, character1.name))
                 Game.attack(character1)
-            if character1_move == "S":
+            if character2_move == "S":
                 print("[{}] Special Attacks {}".format(character2.name, character1.name))
                 Game.special_attack(character2, character1)
             if character2_move == "R":
